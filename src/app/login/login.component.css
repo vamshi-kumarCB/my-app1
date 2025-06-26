@@ -1,0 +1,69 @@
+.parent{
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+}
+
+.login{
+    width: 30%;
+    height: 70%;
+    background-color: rgb(240, 137, 64);
+    border-radius: 10px;
+    font-style: oblique;
+    border: 2px solid white;
+}
+
+input{
+    width: 80%;
+    height: 10%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 10px;
+    border: 0;
+    font-weight: 500;
+}
+h2{
+    text-align: center;
+    margin-top: 8%;
+    font-weight: 700;
+    font-style: oblique;
+    color: black;
+    text-decoration: underline;
+}
+button{
+    width: 50%;
+    height: 10%;
+    margin-left: 25%;
+    margin-top: 9%;
+    border-radius: 10px;
+    border: 0;
+    color: black;
+    font-weight: 700;
+    font-size: large;
+
+}
+#checkbox{
+    margin-top: 5%;
+    width: 7%;
+    height: 3%;
+    color: black;
+}
+h5{
+    text-align: center;
+    margin-top: 8%;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 700;
+    color: black;
+    text-decoration: underline;
+}
+span{
+    color: black;
+    font-size: medium;
+    font-weight: 500;
+
+}
