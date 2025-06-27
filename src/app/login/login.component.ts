@@ -7,10 +7,9 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  password:string='';
+  isVisible:Boolean=false;
 show(){
-  this.password === this.password;
+  this.isVisible = !this.isVisible;
 
-  console.log(this.password);
 }
 }

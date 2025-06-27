@@ -8,13 +8,17 @@
 .left{
     width: 20%;
     height: 100%;
-    background-color: aquamarine;
+    background-color: rgb(190, 248, 228);
+    overflow: auto;
 }
 .right{
     width: 80%;
     height: 100%;
-    background-color: tomato;
+    background-color: rgb(235, 153, 138);
+    overflow: auto;
 }
 h2{
     cursor: pointer;
+    margin-top: 15%;
+    margin-left: 5%;
 }

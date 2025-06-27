@@ -1,0 +1,44 @@
+
+
+<h2 *ngIf="false">Good Morning</h2>
+<h2 *ngIf="true">Hello Everyone</h2>
+<!-- <ol>
+    <li>Andhra Pradesh</li>
+    <li>Telangana</li>
+    <li>Tamilnadu</li>
+    <li>Kerala</li>
+    <li>Karnataka</li>
+</ol><br>
+
+<ol>
+    <li *ngFor="let state of states">{{state}}</li>
+</ol><br>
+
+<select>
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+<h4 *ngFor="let age of ages">{{age}}</h4> -->
+
+<h4>{{date }}</h4>
+<h4>{{date | date }}</h4>
+<h4>{{date | date:"dd/MM/yyyy"}}</h4>
+<h4>{{date | date:"hh:mm:ss"}}</h4>
+
+<table class="table table table-bordered table-primary">
+    <thead>
+        <tr class="table-dark">
+            <td >Product Name</td>
+            <td>Product Price</td>
+            <td>Product Rating</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productName | uppercase}}</td>
+            <td [ngStyle]="{'color':product.price>15000?'red':'green'}">{{product.price | currency}}</td>
+            <td [ngClass]="{'red':product.rating<2.5,'yellow':((product.rating>=2.5)&&(product.rating<4)),'green':product.rating>4}">{{product.rating}}</td>
+        </tr>
+    </tbody>
+</table>
+
+

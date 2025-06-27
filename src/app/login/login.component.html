@@ -5,7 +5,7 @@
         <h2>LOGIN</h2>
         
         <input type="email" placeholder="Enter Your Email Address">
-        <input type="password" placeholder="Enter Your Password" [(ngModel)]="password"><br>
+        <input [type]="isVisible?'text':'password'" placeholder="Enter Your Password"><br>
         <input type="checkbox" id="checkbox" (click)="show()" ><span>Show Password</span><br>
         <button>Login</button>
 

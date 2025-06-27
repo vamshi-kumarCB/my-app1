@@ -1,0 +1,21 @@
+
+.parent{
+    height: 100vh;
+    width: 80vw;
+    margin: 0;
+    background-color: rgb(182, 226, 138);
+   
+}
+h1{
+    text-align: center;
+    
+}
+.tab{
+    height: 90%;
+    width: 60%;
+    margin-right: 15%;
+    margin-top: 5%;
+    background-color: rgb(237, 180, 140);
+    
+
+}

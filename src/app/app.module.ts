@@ -11,6 +11,8 @@ import { ClockComponent } from './clock/clock.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeDataComponent } from './employee-data/employee-data.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     PageNotFoundComponent,
     ClockComponent,
     CalculatorComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    DirectivesComponent,
+    EmployeeDataComponent
   ],
   imports: [
     BrowserModule,
