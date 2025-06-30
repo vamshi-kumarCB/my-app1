@@ -9,6 +9,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeDataComponent } from './employee-data/employee-data.component';
+import { VamshiStoreComponent } from './vamshi-store/vamshi-store.component';
 
 
 const routes: Routes = [
@@ -19,9 +20,9 @@ const routes: Routes = [
     {path: 'clock',component:ClockComponent}, //child routing
     {path: 'calculator',component:CalculatorComponent},
     {path: 'data-binding',component:DataBindingComponent},
-    {path: 'directives',component:DirectivesComponent},
+    {path: 'directives',component:DirectivesComponent}, 
     {path: 'employee-data',component:EmployeeDataComponent},
-
+    {path: 'vamshi-store',component:VamshiStoreComponent},
 
   ]}, //Parent Routing
   {path:'**',component:PageNotFoundComponent}, //wild card routing or error routing

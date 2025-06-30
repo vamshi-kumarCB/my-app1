@@ -2,14 +2,14 @@
 .parent{
     width: 100vw;
     height: 100vh;
-    background-color: coral;
     display: flex;
 }
 .left{
     width: 20%;
     height: 100%;
-    background-color: rgb(190, 248, 228);
+    background-color: rgb(29, 27, 27);
     overflow: auto;
+    color: white;
 }
 .right{
     width: 80%;
@@ -19,6 +19,9 @@
 }
 h2{
     cursor: pointer;
-    margin-top: 15%;
-    margin-left: 5%;
+    margin-top: 5%;
+    margin-left: 8%;
+}
+img{
+    margin-left: 15%;
 }

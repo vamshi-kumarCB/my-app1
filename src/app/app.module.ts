@@ -13,6 +13,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeDataComponent } from './employee-data/employee-data.component';
+import { VamshiStoreComponent } from './vamshi-store/vamshi-store.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EmployeeDataComponent } from './employee-data/employee-data.component';
     CalculatorComponent,
     DataBindingComponent,
     DirectivesComponent,
-    EmployeeDataComponent
+    EmployeeDataComponent,
+    VamshiStoreComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,63 @@
+<div class="parent">
+    <h1>VJ-Store</h1>
+    <div class="head">
+<div class="add">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="itemName" ><br>
+    <label>Price:</label>
+    <input type="number" class="number" [(ngModel)]="itemPrice"><br>
+    <label>Rating:</label>
+    <input type="number" [(ngModel)]="itemRating"><br>
+    <label>Free Delivery:</label>
+    <label>Yes</label>
+    <input type="radio" [(ngModel)]="itemDelivery" name="freeDelivery" [value]="true">
+    <label>No</label>
+    <input type="radio" [(ngModel)]="itemDelivery" name="freeDelivery" [value]="false">
+    <button (click)="add()" class="btn btn-success">Add to Cart</button>
+
+    </div>
+<div class="buttons-right">
+    <input type="text" [(ngModel)]="filterData" (keyup)="search()" placeholder="Search items">
+    <button (click)="freedelvry()">Only Free Delivery </button><br>
+
+    <button (click)="sortlow()">Price Low to High</button>
+    <button (click)="sorthigh()">Price High to Low</button>
+    <button (click)="ratinglow()">Rating Low to High</button>
+    <button (click)="ratinghigh()">Rating High to Low</button><br>
+
+    <button (click)="discount()">Applying 50% Discount</button>
+    <button (click)="charges()">Price with Delivery Charges</button>
+
+    <button (click)="totalPrice()">Total Price</button>
+    <button (click)="count()">Total cart items</button><br>
+
+    </div>
+    </div>
+    <hr>
+    
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Free Delivery</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{item.productName}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.rating}}</td>
+                <td>{{item.freeDelivery}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
