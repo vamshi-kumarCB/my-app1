@@ -1,0 +1,48 @@
+.parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aqua;
+      /* overflow: auto; */
+}
+
+h1{
+    margin: 0;
+    text-align: center;
+}
+.cart{
+    width: 180px;
+    height: 400px;
+    background-color: rgb(219, 220, 220);
+    position: relative;
+    box-shadow: 2px 1px 5px black;
+    border-bottom: 5px solid black;
+}
+.img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+.content{
+    width: 100%;
+    height: 40%;
+    padding-left: 5%;
+}
+.rating{
+        height: 30px;
+        width: 50px;     
+        background-color: rgb(107, 107, 107);
+        opacity: 0.9;
+        position: absolute;
+         font-weight: 700;
+        bottom: 40%;
+        left: 70%;
+        text-align: center;
+
+}
+h4{
+    color: red;
+}

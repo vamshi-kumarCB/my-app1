@@ -10,6 +10,9 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeDataComponent } from './employee-data/employee-data.component';
 import { VamshiStoreComponent } from './vamshi-store/vamshi-store.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { MailComponent } from './mail/mail.component';
 
 
 const routes: Routes = [
@@ -23,6 +26,9 @@ const routes: Routes = [
     {path: 'directives',component:DirectivesComponent}, 
     {path: 'employee-data',component:EmployeeDataComponent},
     {path: 'vamshi-store',component:VamshiStoreComponent},
+    {path: 'vehicles',component:VehiclesComponent},
+     {path: 'shopping',component:ShoppingComponent},
+      {path: 'mail',component:MailComponent},
 
   ]}, //Parent Routing
   {path:'**',component:PageNotFoundComponent}, //wild card routing or error routing

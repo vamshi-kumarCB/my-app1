@@ -14,6 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeDataComponent } from './employee-data/employee-data.component';
 import { VamshiStoreComponent } from './vamshi-store/vamshi-store.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { MailComponent } from './mail/mail.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +31,16 @@ import { VamshiStoreComponent } from './vamshi-store/vamshi-store.component';
     DataBindingComponent,
     DirectivesComponent,
     EmployeeDataComponent,
-    VamshiStoreComponent
+    VamshiStoreComponent,
+    VehiclesComponent,
+    ShoppingComponent,
+    MailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

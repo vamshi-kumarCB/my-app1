@@ -55,13 +55,30 @@ delete(index:number){
     }
 
   
-    charges(){
-         this.items= this.items.map((item:any)=>({
-          ...item,
-          price:item.price < 3000 ? item.price*2 : item.price 
-        
-      }));
-    }
+    // charges(){
+    //   //    this.items= this.items.map((item:any)=>({
+    //   //     // ...item,
+    //   //     // price:item.price < 3000 ? item.price*2 : item.price 
+          
+    //   // }));
+    //   this.items=this.items.filter((item:any)=>{item.freeDelivery==false;
+    //  this.items= this.items.map((item:any)=>{
+    //     item.price=item.price+100;
+    //     return item;
+    //   });
+    //   return this.items;
+    // })
+    // }
+
+    charges() {
+    this.items = this.items.map((item: any) => {
+      if (!item.freeDelivery) {
+        item.price = item.price + 100;
+      }
+      return item;
+    });
+}
+
 
     totalPrice(){
       let totalCost=this.items.reduce((sum:any,item:any)=>sum+item.price,0);
@@ -72,7 +89,7 @@ delete(index:number){
       alert(totalCount);
     }
 
-     itemName:string='';
+    itemName:string='';
     itemPrice:number=0;
     itemRating:number=0;
     itemDelivery:Boolean=false;
