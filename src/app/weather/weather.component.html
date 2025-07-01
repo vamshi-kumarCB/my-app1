@@ -1,0 +1,18 @@
+<div class="parent" >
+
+    <div class="weather" *ngFor="let weathers of weather" >
+        <br><h2>Weather in Hyderabad</h2>
+
+        <div class="dot" [ngClass]="{'blue':weathers.current_weather.temperature<0,'yellow':((weathers.current_weather.temperature>=0)&&(weathers.current_weather.temperature<30)),'green':((weathers.current_weather.temperature>30)&&(weathers.current_weather.temperature<35)),'red':((weathers.current_weather.temperature>35)&&(weathers.current_weather.temperature<60))}">
+
+        </div>
+        <h1 [ngClass]="{'blue1':weathers.current_weather.temperature<0,'yellow1':((weathers.current_weather.temperature>0)&&(weathers.current_weather.temperature<30)),'green1':((weathers.current_weather.temperature>30)&&(weathers.current_weather.temperature<35)),'red1':((weathers.current_weather.temperature>35)&&(weathers.current_weather.temperature<60))}">{{weathers.current_weather.temperature}} {{weathers.current_weather_units.temperature}}</h1>
+        <h3>Wind Speed: {{weathers.current_weather.windspeed}} {{weathers.current_weather_units.windspeed}}</h3>
+        <h3>Wind Direction: {{weathers.current_weather.winddirection}}{{weathers.current_weather_units.winddirection}}</h3>
+
+        <h4 [ngStyle]="{'color':weathers.current_weather.is_day==1?'blue':'green'}">{{weathers.current_weather.is_day==1?'Daytime':'Night time'}}</h4>
+
+
+    </div>
+
+</div>

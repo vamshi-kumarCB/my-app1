@@ -1,0 +1,47 @@
+.parent{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(13, 13, 13);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.card{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50px;
+
+}
+.btn-primary{
+    background-color: rgba(61, 60, 60, 0.766);
+    border: 10px solid;
+    
+
+}
+img{
+    border-radius: 50px;
+}
+p{
+    color: white;
+}
+span{
+    opacity: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 25%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.189);
+   
+}
+span:hover{
+    opacity: 1;
+}
+img:hover+span{
+    opacity: 1;
+
+}
+
+

@@ -1,0 +1,66 @@
+.parent{
+
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather{
+    height: 60%;
+    width: 40%;
+    background-color: aliceblue;
+    
+}
+h2{
+    text-align: center;
+}
+h1{
+    font-weight: bold;
+    font-size: 80px
+}
+h1,h3,h4{
+    text-align: center;
+}
+h3,h4{
+    font-weight: 500;
+    font-size: large;
+}
+h4{
+    margin-top: 10%;
+}
+.dot{
+    height: 10%;
+    width: 8%;
+    border-radius: 50%;
+    margin-left: 45%;
+    margin-top: 10%;
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+    
+}
+.green{
+    background-color: green;
+}
+.blue1{
+    color: blue;
+}
+.yellow1{
+    color: orange;
+}
+.green1{
+    color: green;
+}
+red1{
+    color: red;
+}

@@ -13,6 +13,8 @@ import { VamshiStoreComponent } from './vamshi-store/vamshi-store.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { MailComponent } from './mail/mail.component';
+import { ImagesComponent } from './images/images.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 const routes: Routes = [
@@ -29,6 +31,9 @@ const routes: Routes = [
     {path: 'vehicles',component:VehiclesComponent},
      {path: 'shopping',component:ShoppingComponent},
       {path: 'mail',component:MailComponent},
+       {path: 'images',component:ImagesComponent},
+       {path: 'weather',component:WeatherComponent},
+
 
   ]}, //Parent Routing
   {path:'**',component:PageNotFoundComponent}, //wild card routing or error routing

@@ -18,6 +18,8 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { MailComponent } from './mail/mail.component';
+import { ImagesComponent } from './images/images.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MailComponent } from './mail/mail.component';
     VamshiStoreComponent,
     VehiclesComponent,
     ShoppingComponent,
-    MailComponent
+    MailComponent,
+    ImagesComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
