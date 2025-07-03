@@ -1,0 +1,73 @@
+<div class="body">
+    <h1>Student Id Cards</h1>
+    <input type="text" [(ngModel)]="term" (keyup)="search()" placeholder="Search Student">
+    <select [(ngModel)]="column">
+        <option value="name">Name</option>
+        <option value="dob">Date of Birth</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone</option>
+
+    </select>
+
+    <select [(ngModel)]="order">
+        <option value="asc">Low to High</option>    
+        <option value="desc">High to Low</option>
+    </select>
+    <button (click)="sort()"  class="btn btn-info">Sort</button>
+
+    <select [(ngModel)]="items">
+        <option>10</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+    </select>
+
+       <select [(ngModel)]="page">
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+
+        </select>
+
+        <button (click)="pagination()"  class="btn btn-warning">pagination</button>
+        <button class="btn btn-success" routerLink="/dashboard/create-student">Create Student</button>
+    <div class="parent">
+
+    
+    <div class="card" *ngFor="let student of studentdetails">
+        
+        <div class="header">
+            <img class="logo" src="https://images.shiksha.com/mediadata/images/1597630194phpssBeF7.jpeg" alt="" width="10%" height="90%">
+            <h2>St Degree College,Kurnool</h2>
+
+        </div>
+
+        <div class="bottom">
+
+        
+        <div class="image-card">
+            
+        <img class="pic" src="{{student.profile_picture}}" alt="" height="90%" width="70%">
+    
+        </div>
+        <div class="content">
+            <h3>Academics 2025-26</h3>
+            <h4>Name : {{student.name}}</h4>
+            <h4>DOB : {{student.dob}}</h4>
+            <h4>Email : {{student.email}}</h4>
+            <h4>Phone : {{student.phone}}</h4>
+
+        </div>
+        
+        </div>
+        <div class="footer">
+            <button class="btn btn-dark">Edit</button>
+            <button class="btn btn-success">View</button>
+            <button class="btn btn-danger" (click)="delete(student.id)">Delete</button>
+        </div>
+
+    </div>
+    </div>
+
+</div>

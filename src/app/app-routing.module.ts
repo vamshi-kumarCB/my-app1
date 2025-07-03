@@ -15,6 +15,9 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { MailComponent } from './mail/mail.component';
 import { ImagesComponent } from './images/images.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentIdComponent } from './student-id/student-id.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 
 const routes: Routes = [
@@ -33,10 +36,14 @@ const routes: Routes = [
       {path: 'mail',component:MailComponent},
        {path: 'images',component:ImagesComponent},
        {path: 'weather',component:WeatherComponent},
+       {path: 'create-vehicle',component:CreateVehicleComponent},
+       {path: 'student-id',component:StudentIdComponent},
+        {path: 'create-student',component:CreateStudentComponent},
 
 
   ]}, //Parent Routing
   {path:'**',component:PageNotFoundComponent}, //wild card routing or error routing
+   
 
 ];
 

@@ -1,0 +1,33 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/006/937/544/small_2x/multicolored-abstract-textured-grunge-background-template-vector.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    height: 70%;
+    width: 40%;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 8%;
+}
+
+input{
+    margin-top: 3%;
+    height: 15%;
+    width: 50%;
+    border-radius: 10px;
+}
+h2{
+    margin-top: 5%;
+}
+.dob{
+    height: 14%;
+    width: 50%;
+}
+button{
+    margin-top: 2%;
+}

@@ -1,0 +1,22 @@
+<div class="parent">
+
+    <div class="card">
+
+        <h2>Create Student Details</h2>
+
+        <form [formGroup]="studentForm">
+    
+    <input type="text" formControlName="name" placeholder="Enter Student Name"><br>
+    <input type="email" formControlName="email" placeholder="Enter Email"><br>
+    <input type="number" formControlName="phone" placeholder="Enter Phone Number"><br>
+    <input type="date" formControlName="dob" class="dob"><br>
+    <input type="text" formControlName="city" placeholder="Enter City"><br>
+    <input type="text" formControlName="profile_picture" placeholder="Insert Photo"><br>
+
+    <button (click)="submit()" class="btn btn-success">Submit</button>
+
+
+</form>
+
+    </div>
+</div>
