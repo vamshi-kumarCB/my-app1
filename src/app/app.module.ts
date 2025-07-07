@@ -23,6 +23,12 @@ import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentIdComponent } from './student-id/student-id.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 
 @NgModule({
@@ -46,6 +52,12 @@ import { CreateStudentComponent } from './create-student/create-student.componen
     CreateVehicleComponent,
     StudentIdComponent,
     CreateStudentComponent,
+    StudentFormComponent,
+    AccountsComponent,
+    VehicleDetailsComponent,
+    StudentDetailsComponent,
+    CreateAccountsComponent,
+    AccountDetailsComponent,
   ],
   imports: [
     BrowserModule,

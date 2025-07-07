@@ -2,7 +2,9 @@
 
     <div class="card">
 
-        <h2>Create Student Details</h2>
+        <h2 *ngIf="id">Edit Student Details</h2>
+        <h2 *ngIf="!id">Create Student Details</h2>
+
 
         <form [formGroup]="studentForm">
     

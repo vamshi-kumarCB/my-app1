@@ -48,13 +48,13 @@
         
         <div class="image-card">
             
-        <img class="pic" src="{{student.profile_picture}}" alt="" height="90%" width="70%">
+        <img class="pic" src="{{student.profile_picture}}" alt="" height="80%" width="70%">
     
         </div>
         <div class="content">
             <h3>Academics 2025-26</h3>
             <h4>Name : {{student.name}}</h4>
-            <h4>DOB : {{student.dob}}</h4>
+            <h4>DOB : {{student.dob | date}}</h4>
             <h4>Email : {{student.email}}</h4>
             <h4>Phone : {{student.phone}}</h4>
 
@@ -62,8 +62,8 @@
         
         </div>
         <div class="footer">
-            <button class="btn btn-dark">Edit</button>
-            <button class="btn btn-success">View</button>
+            <button class="btn btn-dark" routerLink="/dashboard/edit-student/{{student.id}}">Edit</button>
+            <button class="btn btn-success" routerLink="/dashboard/student-details/{{student.id}}">View</button>
             <button class="btn btn-danger" (click)="delete(student.id)">Delete</button>
         </div>
 

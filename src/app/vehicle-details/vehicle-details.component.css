@@ -1,0 +1,20 @@
+div{
+    width: 500px;
+    height: 500px;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/004/243/021/small/abstract-template-background-white-and-bright-blue-squares-overlapping-with-halftone-and-texture-free-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+h1{
+    text-decoration: underline;
+    color: blue;
+}
+p{
+    font-size: larger;
+    text-decoration: solid;
+    font-weight: 600;
+    color: brown;
+}

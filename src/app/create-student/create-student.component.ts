@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { StudentIdService } from '../student-id.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-student',
@@ -20,10 +20,43 @@ export class CreateStudentComponent {
   
     })
   
-    constructor(private _studentService:StudentIdService,private _router:Router){}
+    id:number=0;
+    constructor(private _studentService:StudentIdService,private _router:Router,private _activatedRoute:ActivatedRoute){
+      _activatedRoute.params.subscribe(
+        (data:any)=>{
+          console.log(data.id);
+          this.id=data.id;
+        }
+      )
+      if(this.id){
+      _studentService.getStudents(this.id).subscribe(
+        (data:any)=>{
+          console.log(data);
+          this.studentForm.patchValue(data);
+        },(error:any)=>{
+          alert("Internal Server Error");
+        }
+      )
+     }
+    }
   
     submit(){
-      console.log(this.studentForm.value);
+
+      if (this.id) {
+        //update
+      this._studentService.updateStudent(this.id,this.studentForm.value).subscribe(
+        (data:any)=>{
+          alert("Student record Updated Successfully!");
+          this._router.navigateByUrl("/dashboard/student-id");
+        },(error:any)=>{
+          alert("Internal Server Error")
+        }
+      )
+
+        
+      } else {
+        //create
+        console.log(this.studentForm.value);
       this._studentService.createStudent(this.studentForm.value).subscribe(
         (data:any)=>{
           alert("Student reccord add Successfully");
@@ -32,6 +65,9 @@ export class CreateStudentComponent {
           alert("Internal Server Error")
         }
       )
+        
+      }
+      
     }
 
 }

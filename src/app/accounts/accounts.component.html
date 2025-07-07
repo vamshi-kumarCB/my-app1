@@ -1,0 +1,65 @@
+<div class="parent">
+    <h1>Account Details</h1>
+
+    <input type="text" [(ngModel)]="term" (keyup)="search()">
+
+    <select [(ngModel)]="column">
+        <option value="account_name">Account Name</option>
+        <option value="account_number">Account Number</option>
+        <option value="available_balance">Account Balance</option>
+    </select>
+
+    <select [(ngModel)]="order">
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+    </select>
+
+    <button (click)="sort()" class="btn btn-info">Sort</button>
+
+    <select [(ngModel)]="items">
+        <option>10</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+    </select>
+
+    <select [(ngModel)]="page">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+
+    <button (click)="pagination()" class="btn btn-warning">Go</button>
+
+    <button class="btn btn-success" routerLink="/dashboard/create-accounts">Create Account</button>
+
+
+
+    <table  class="table table-dark">
+        <thead>
+            <tr>
+                <th>S no</th>
+                <th>Account Name</th>
+                <th>Account Number</th>
+                <th>Available Balance</th>
+                <th>Profile Picture</th>
+                <th colspan="3">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of accounts;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{account.account_name}}</td>
+                <td>{{account.account_number}}</td>
+                <td>{{account.available_balance}}</td>
+                <td><img src="{{account.profie_picture}}" alt="" width="100px"></td>
+                <td><button class="btn btn-success" routerLink="/dashboard/account-details/{{account.id}}">View</button></td>
+                <td><button class="btn btn-warning" routerLink="/dashboard/edit-account/{{account.id}}">Edit</button></td>
+                
+                <td><button class="btn btn-danger" (click)="delete(account.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

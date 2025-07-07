@@ -18,6 +18,12 @@ import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentIdComponent } from './student-id/student-id.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 
 const routes: Routes = [
@@ -39,6 +45,18 @@ const routes: Routes = [
        {path: 'create-vehicle',component:CreateVehicleComponent},
        {path: 'student-id',component:StudentIdComponent},
         {path: 'create-student',component:CreateStudentComponent},
+        {path: 'student-form',component:StudentFormComponent},
+        {path: 'accounts',component:AccountsComponent},
+        {path: 'vehicle-details/:id',component:VehicleDetailsComponent},
+        {path: 'edit-vehicle/:id',component:CreateVehicleComponent},
+        {path: 'student-details/:id',component:StudentDetailsComponent},
+        {path: 'edit-student/:id',component:CreateStudentComponent},
+        {path: 'create-accounts',component:CreateAccountsComponent},
+        {path: 'account-details/:id',component:AccountDetailsComponent},
+        {path: 'edit-account/:id',component:CreateAccountsComponent},
+
+        
+
 
 
   ]}, //Parent Routing

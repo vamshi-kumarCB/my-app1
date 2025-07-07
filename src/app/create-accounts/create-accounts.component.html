@@ -1,0 +1,14 @@
+<div class="card">
+<h1 *ngIf="id">Edit Account Details</h1>
+<h1 *ngIf="!id">Create Account</h1>
+<form [formGroup]="accountForm">
+<input type="text" formControlName="account_name" placeholder="Enter Your Name"><br>
+<input type="number" formControlName="account_number" placeholder="Enter Account Number"><br>
+<input type="number" formControlName="available_balance" placeholder="Enter Available Balance"><br>
+<input type="text" formControlName="profie_picture" placeholder="Insert Image URL"><br>
+
+<button class="btn btn-success" (click)="submit()">Submit</button>
+
+</form>
+</div>
+
