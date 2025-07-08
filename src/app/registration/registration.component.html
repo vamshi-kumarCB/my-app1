@@ -1,0 +1,18 @@
+
+<div class="parent">
+    <h1>User Registration</h1>
+
+<form [formGroup]="registationForm">
+    <label>Enter Your Name: </label>
+    <input type="text" formControlName="name"><br>
+     <label>Enter Your Email: </label>
+    <input type="email" formControlName="email"><br>
+     <label>Enter Your Mobile Number: </label>
+    <input type="number" formControlName="mobile"><br>
+     <label>Enter Your Password: </label>
+    <input type="password" formControlName="password"><br>
+
+    <button class="btn btn-primary" (click)="register()">Create Account</button>
+    <p routerLink="/"> Already if you have an account? Login</p>
+</form>
+</div>

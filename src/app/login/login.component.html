@@ -3,13 +3,21 @@
 <div class="parent">
     <div class="login">
         <h2>LOGIN</h2>
-        
-        <input type="email" placeholder="Enter Your Email Address">
-        <input [type]="isVisible?'text':'password'" placeholder="Enter Your Password"><br>
+        <form [formGroup]="loginForm">      
+         <input type="email" placeholder="Enter Your Email Address" formControlName="email">
+        <input [type]="isVisible?'text':'password'" placeholder="Enter Your Password" formControlName="password"><br>
         <input type="checkbox" id="checkbox" (click)="show()" ><span>Show Password</span><br>
-        <button>Login</button>
+        <button (click)="login()">Login</button>
+
+         <h5 routerLink="/registration">SignUp</h5>
+         
 
         <h5 routerLink="/dashboard">Contiue to dashboard</h5>
+
+       
+
+        </form>
+
         
     </div>
 

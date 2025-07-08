@@ -24,12 +24,15 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
   
-  {path: '',component:LoginComponent},   //Default Routing
-  {path: 'dashboard',component:DashboardComponent,children:[
+  {path: '',component:LoginComponent}, //Default Routing
+  {path: 'registration',component:RegistrationComponent},  
+  {path: 'dashboard',component:DashboardComponent,canActivate:[AuthGuard],children:[
     {path: 'home',component:HomeComponent},
     {path: 'clock',component:ClockComponent}, //child routing
     {path: 'calculator',component:CalculatorComponent},

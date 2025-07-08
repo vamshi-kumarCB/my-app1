@@ -29,6 +29,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
     StudentDetailsComponent,
     CreateAccountsComponent,
     AccountDetailsComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,
