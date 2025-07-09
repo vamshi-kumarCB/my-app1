@@ -30,6 +30,8 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -60,6 +62,8 @@ import { RegistrationComponent } from './registration/registration.component';
     CreateAccountsComponent,
     AccountDetailsComponent,
     RegistrationComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
