@@ -33,13 +33,13 @@ h1{
 }
 .rating{
         height: 30px;
-        width: 50px;     
+        width: 100px;     
         background-color: rgb(107, 107, 107);
         opacity: 0.9;
         position: absolute;
-         font-weight: 700;
+        font-weight: 700;
         bottom: 40%;
-        left: 70%;
+        left: 40%;
         text-align: center;
 
 }

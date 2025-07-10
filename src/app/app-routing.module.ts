@@ -27,6 +27,7 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './auth.guard';
 import { ParentComponent } from './parent/parent.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
 
 
 const routes: Routes = [
@@ -59,6 +60,7 @@ const routes: Routes = [
         {path: 'account-details/:id',component:AccountDetailsComponent},
         {path: 'edit-account/:id',component:CreateAccountsComponent},
         {path: 'parent',component:ParentComponent},
+        {path: 'sibling1',component:Sibling1Component},
 
         
 

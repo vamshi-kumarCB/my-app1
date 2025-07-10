@@ -31,6 +31,10 @@
     <button (click)="totalPrice()">Total Price</button>
     <button (click)="count()">Total cart items</button><br>
 
+    <app-textarea [maxLength]="50"></app-textarea>
+
+
+
     </div>
     </div>
     <hr>
@@ -52,7 +56,8 @@
                 <td>{{i+1}}</td>
                 <td>{{item.productName}}</td>
                 <td>{{item.price}}</td>
-                <td>{{item.rating}}</td>
+                <td><app-rating [rating]="item.rating"></app-rating></td>
+                
                 <td>{{item.freeDelivery}}</td>
                 <td>
                     <button class="btn btn-danger" (click)="delete(i)">Delete</button>
