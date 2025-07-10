@@ -10,6 +10,7 @@ export class VehiclesService {
   
 
   constructor(private _httpClient:HttpClient) { }
+  // apiURL:string='assets/data.json'
   apiURL:string='https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction';
 
 getVehicles():Observable<any>{
