@@ -30,9 +30,15 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextareaComponent } from './textarea/textarea.component';
+import { AuthInterceptor } from './auth.interceptor';
 import { CapitalDirective } from './capital.directive';
 import { RupeePipe } from './rupee.pipe';
-import { AuthInterceptor } from './auth.interceptor';
 
 
 @NgModule({
@@ -63,6 +69,12 @@ import { AuthInterceptor } from './auth.interceptor';
     CreateAccountsComponent,
     AccountDetailsComponent,
     RegistrationComponent,
+    ParentComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    RatingComponent,
+    TextareaComponent,
     CapitalDirective,
     RupeePipe,
   ],

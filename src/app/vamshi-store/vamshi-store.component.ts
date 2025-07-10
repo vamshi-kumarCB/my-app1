@@ -106,6 +106,6 @@ delete(index:number){
       this.items.unshift(user);
     }
     
+    }
     
-
-}
+  
