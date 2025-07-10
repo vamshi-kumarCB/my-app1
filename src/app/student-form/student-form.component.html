@@ -2,7 +2,7 @@
 
 <form [formGroup]="studentForm">
     <label>Enter Name:</label>
-    <input type="text" formControlName="name"><br>
+    <input type="text" formControlName="name" appCapital><br>
 
     <div *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.invalid">
         <p *ngIf="studentForm.get('name')?.errors?.['required']">Name Should be enter</p>
