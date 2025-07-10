@@ -15,7 +15,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeDataComponent } from './employee-data/employee-data.component';
 import { VamshiStoreComponent } from './vamshi-store/vamshi-store.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { MailComponent } from './mail/mail.component';
 import { ImagesComponent } from './images/images.component';
@@ -30,6 +30,9 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { CapitalDirective } from './capital.directive';
+import { RupeePipe } from './rupee.pipe';
+import { AuthInterceptor } from './auth.interceptor';
 
 
 @NgModule({
@@ -60,6 +63,8 @@ import { RegistrationComponent } from './registration/registration.component';
     CreateAccountsComponent,
     AccountDetailsComponent,
     RegistrationComponent,
+    CapitalDirective,
+    RupeePipe,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +73,13 @@ import { RegistrationComponent } from './registration/registration.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
