@@ -30,6 +30,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { RegistrationComponent } from './registration/registration.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutUsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
