@@ -39,6 +39,7 @@ import { TextareaComponent } from './textarea/textarea.component';
 import { AuthInterceptor } from './auth.interceptor';
 import { CapitalDirective } from './capital.directive';
 import { RupeePipe } from './rupee.pipe';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { RupeePipe } from './rupee.pipe';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [
     {
