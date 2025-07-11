@@ -1,0 +1,8 @@
+<div class="star-rating">
+  <ng-container *ngFor="let star of stars">
+    <span>
+      <ng-container *ngIf="star <= rating; else emptyStar">★</ng-container>
+      <ng-template #emptyStar>☆</ng-template>
+    </span>
+  </ng-container>
+</div>

@@ -15,7 +15,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeDataComponent } from './employee-data/employee-data.component';
 import { VamshiStoreComponent } from './vamshi-store/vamshi-store.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { MailComponent } from './mail/mail.component';
 import { ImagesComponent } from './images/images.component';
@@ -30,6 +30,15 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextareaComponent } from './textarea/textarea.component';
+import { AuthInterceptor } from './auth.interceptor';
+import { CapitalDirective } from './capital.directive';
+import { RupeePipe } from './rupee.pipe';
 import { AboutUsModule } from './about-us/about-us.module';
 
 
@@ -61,6 +70,14 @@ import { AboutUsModule } from './about-us/about-us.module';
     CreateAccountsComponent,
     AccountDetailsComponent,
     RegistrationComponent,
+    ParentComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    RatingComponent,
+    TextareaComponent,
+    CapitalDirective,
+    RupeePipe,
   ],
   imports: [
     BrowserModule,
@@ -68,9 +85,15 @@ import { AboutUsModule } from './about-us/about-us.module';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AboutUsModule,
+    AboutUsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
