@@ -57,6 +57,9 @@ const routes: Routes = [
         {path: 'create-accounts',component:CreateAccountsComponent},
         {path: 'account-details/:id',component:AccountDetailsComponent},
         {path: 'edit-account/:id',component:CreateAccountsComponent},
+        {path:'payments',
+          loadChildren:() => import('./payments/payments.module').then(m => m.PaymentsModule)
+        }
 
         
 
