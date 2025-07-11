@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
@@ -59,6 +59,9 @@ const routes: Routes = [
         {path: 'create-accounts',component:CreateAccountsComponent},
         {path: 'account-details/:id',component:AccountDetailsComponent},
         {path: 'edit-account/:id',component:CreateAccountsComponent},
+        {path:'payments',
+          loadChildren:() => import('./payments/payments.module').then(m => m.PaymentsModule)
+        },
         {path: 'parent',component:ParentComponent},
         {path: 'sibling1',component:Sibling1Component},
 
@@ -73,7 +76,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
