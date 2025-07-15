@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StudentDetailsComponent } from './student-details.component';
+import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('StudentDetailsComponent', () => {
   let component: StudentDetailsComponent;
@@ -8,7 +12,17 @@ describe('StudentDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StudentDetailsComponent ]
+      declarations: [ StudentDetailsComponent ],
+      imports: [FormsModule,HttpClientTestingModule],
+      providers: [
+      {
+        provide: ActivatedRoute,
+        useValue: {
+          params: of({ 
+            get: (key: string) => '123' }), 
+        }
+      }
+    ]
     })
     .compileComponents();
 

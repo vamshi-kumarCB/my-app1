@@ -1,3 +1,4 @@
+<div>
 <h1>vehicles</h1>
 
 <input type="text" [(ngModel)]="term" (keyup)="search()">
@@ -65,3 +66,10 @@
                 <td> <button class="btn btn-info" routerLink="/dashboard/vehicle-details/{{vehicle.id}}">View</button></td>
                 <td><button class="btn btn-warning" routerLink="/dashboard/edit-vehicle/{{vehicle.id}}">Edit</button></td>
                 <td><button class="btn btn-danger" (click)="delete(vehicle.id)">Delete</button></td>
+                </tr>
+
+                </tbody>
+        </table>
+
+
+     </div>

@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateVehicleComponent } from './create-vehicle.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('CreateVehicleComponent', () => {
   let component: CreateVehicleComponent;
@@ -8,7 +12,16 @@ describe('CreateVehicleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateVehicleComponent ]
+      declarations: [ CreateVehicleComponent ],
+      imports: [HttpClientTestingModule,ReactiveFormsModule],
+       providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            params: of({ id: '123' }) 
+          }
+        }
+      ]
     })
     .compileComponents();
 

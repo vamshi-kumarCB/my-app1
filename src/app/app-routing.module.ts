@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -63,11 +63,7 @@ const routes: Routes = [
           loadChildren:() => import('./payments/payments.module').then(m => m.PaymentsModule)
         },
         {path: 'parent',component:ParentComponent},
-        {path: 'sibling1',component:Sibling1Component},
-
-        
-
-
+        {path: 'sibling1',component:Sibling1Component},    
 
   ]}, //Parent Routing
   {path:'**',component:PageNotFoundComponent}, //wild card routing or error routing
