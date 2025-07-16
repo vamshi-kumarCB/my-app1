@@ -40,6 +40,7 @@ import { AuthInterceptor } from './auth.interceptor';
 import { CapitalDirective } from './capital.directive';
 import { RupeePipe } from './rupee.pipe';
 import { AboutUsModule } from './about-us/about-us.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { AboutUsModule } from './about-us/about-us.module';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AboutUsModule
+    AboutUsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
