@@ -41,6 +41,10 @@ import { CapitalDirective } from './capital.directive';
 import { RupeePipe } from './rupee.pipe';
 import { AboutUsModule } from './about-us/about-us.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+import { counterReducer } from './store/counter.reducer';
 
 
 @NgModule({
@@ -79,6 +83,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TextareaComponent,
     CapitalDirective,
     RupeePipe,
+    AdminComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,7 +93,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ReactiveFormsModule,
     AboutUsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot({counter:counterReducer}, {})
   ],
   providers: [
     {
