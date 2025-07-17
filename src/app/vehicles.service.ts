@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Environments } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class VehiclesService {
   apiURL:string='https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction';
 
 getVehicles():Observable<any>{
-  return this._httpClient.get(this.apiURL);
+  return this._httpClient.get(Environments.vehicleApi);
 
 }
 
