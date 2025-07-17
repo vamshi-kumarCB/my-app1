@@ -45,6 +45,7 @@ import { StoreModule } from '@ngrx/store';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { counterReducer } from './store/counter.reducer';
+import { SignalsComponent } from './signals/signals.component';
 
 
 @NgModule({
@@ -85,6 +86,7 @@ import { counterReducer } from './store/counter.reducer';
     RupeePipe,
     AdminComponent,
     UserComponent,
+    SignalsComponent,
   ],
   imports: [
     BrowserModule,
