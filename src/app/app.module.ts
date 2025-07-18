@@ -45,6 +45,9 @@ import { StoreModule } from '@ngrx/store';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { counterReducer } from './store/counter.reducer';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContentComponent } from './content/content.component';
 
 
 @NgModule({
@@ -85,6 +88,9 @@ import { counterReducer } from './store/counter.reducer';
     RupeePipe,
     AdminComponent,
     UserComponent,
+    HeaderComponent,
+    FooterComponent,
+    ContentComponent,
   ],
   imports: [
     BrowserModule,
