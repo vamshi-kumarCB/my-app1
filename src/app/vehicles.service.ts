@@ -20,7 +20,7 @@ getVehicles():Observable<any>{
 }
 
 getVehicle(id:number):Observable<any>{
-  return this._httpClient.get(this.apiURL+"/"+id);
+  return this._httpClient.get(`${Environments.vehicleApi}/${id}`);
 
 }
 
