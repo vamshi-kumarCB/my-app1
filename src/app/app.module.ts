@@ -88,6 +88,9 @@ import { ContentComponent } from './content/content.component';
     RupeePipe,
     AdminComponent,
     UserComponent,
+    HeaderComponent,
+    ContentComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
